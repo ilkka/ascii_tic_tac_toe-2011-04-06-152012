@@ -42,5 +42,11 @@ describe AsciiTicTacToe do
       a.move(1, 1, 'x')
       a.at(1, 1).should == 'x'
     end
+
+    it 'should reject moves that are outside the grid' do
+      lambda {
+        AsciiTicTacToe.new.move(4, 4, 'x')
+      }.should raise_error
+    end
   end
 end
