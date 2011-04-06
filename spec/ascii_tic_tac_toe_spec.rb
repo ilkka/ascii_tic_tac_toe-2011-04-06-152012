@@ -60,5 +60,11 @@ describe AsciiTicTacToe do
         AsciiTicTacToe.new.move(4, 4, 'x')
       }.should raise_error
     end
+
+    it 'should reject moves that use invalid pieces' do
+      lambda {
+        AsciiTicTacToe.new.move(1, 2, 'p')
+      }.should raise_error
+    end
   end
 end
