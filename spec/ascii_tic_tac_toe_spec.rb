@@ -18,12 +18,12 @@ describe AsciiTicTacToe do
     }.should_not raise_exception
     lambda {
       AsciiTicTacToe.new.row(0)
-    }.should_not raise_exception
+    }.should raise_exception
     lambda {
       AsciiTicTacToe.new.row(4)
-    }.should_not raise_exception
+    }.should raise_exception
     lambda {
       AsciiTicTacToe.new.row(-1)
-    }.should_not raise_exception
+    }.should raise_exception
   end
 end
