@@ -36,5 +36,11 @@ describe AsciiTicTacToe do
         AsciiTicTacToe.new.move(1,1,'x')
       }.should_not raise_exception
     end
+
+    it 'should place the given piece on the board' do
+      a = AsciiTicTacToe.new
+      a.move(1, 1, 'x')
+      a.at(1, 1).should == 'x'
+    end
   end
 end
