@@ -20,5 +20,13 @@ describe AsciiTicTacToe do
         end
       }.should_not raise_exception
     end
+
+    it 'should return empty spaces for all positions in the beginning' do
+      (1..3).each do |row|
+        (1..3).each do |col|
+          AsciiTicTacToe.new.at(row, col).should == ' '
+        end
+      end
+    end
   end
 end
