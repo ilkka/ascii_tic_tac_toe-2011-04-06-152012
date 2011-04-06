@@ -13,11 +13,11 @@ describe AsciiTicTacToe do
   describe 'at' do
     it 'should throw an exception for indexes not in 1..3 inclusive' do
       lambda {
-        AsciiTicTacToe.new.at(1,1)
-        AsciiTicTacToe.new.at(2,2)
-        AsciiTicTacToe.new.at(3,3)
-        AsciiTicTacToe.new.at(1,3)
-        AsciiTicTacToe.new.at(3,1)
+        (1..3).each do |row|
+          (1..3).each do |col|
+            AsciiTicTacToe.new.at(row, col)
+          end
+        end
       }.should_not raise_exception
     end
   end
