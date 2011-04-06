@@ -17,11 +17,8 @@ class AsciiTicTacToe
     ]
   end
 
-  def row(index)
-    raise RowIndexOutOfBounds unless (index >= 1 and index <= 3)
-  end
-
-  def col(index)
-    raise ColumnIndexOutOfBounds unless (index >= 1 and index <= 3)
+  def at(row, column)
+    raise RowIndexOutOfBounds unless (row >= 1 and row <= 3)
+    raise ColumnIndexOutOfBounds unless (column >= 1 and column <= 3)
   end
 end
