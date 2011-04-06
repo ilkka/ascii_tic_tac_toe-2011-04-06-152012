@@ -1,6 +1,9 @@
 class RowIndexOutOfBounds < Exception
 end
 
+class ColumnIndexOutOfBounds < Exception
+end
+
 class AsciiTicTacToe
   def empty
     ' '
@@ -16,5 +19,9 @@ class AsciiTicTacToe
 
   def row(index)
     raise RowIndexOutOfBounds unless (index >= 1 and index <= 3)
+  end
+
+  def col(index)
+    raise ColumnIndexOutOfBounds unless (index >= 1 and index <= 3)
   end
 end
