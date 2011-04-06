@@ -21,6 +21,18 @@ describe AsciiTicTacToe do
       }.should_not raise_exception
     end
 
+    it 'should not accept indexes not in 1..3 inclusive' do
+      lambda {
+        AsciiTicTacToe.new.at(0, 1)
+      }.should raise_exception
+      lambda {
+        AsciiTicTacToe.new.at(2, 4)
+      }.should raise_exception
+      lambda {
+        AsciiTicTacToe.new.at(3, -1)
+      }.should raise_exception
+    end
+
     it 'should return empty spaces for all positions in the beginning' do
       (1..3).each do |row|
         (1..3).each do |col|
