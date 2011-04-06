@@ -11,7 +11,7 @@ describe AsciiTicTacToe do
   end
 
   describe 'at' do
-    it 'should throw an exception for indexes not in 1..3 inclusive' do
+    it 'should accept indexes in 1..3 inclusive' do
       lambda {
         (1..3).each do |row|
           (1..3).each do |col|
