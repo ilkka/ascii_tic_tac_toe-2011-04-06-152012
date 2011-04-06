@@ -26,5 +26,6 @@ class AsciiTicTacToe
   def move(row, column, piece)
     raise RowIndexOutOfBounds unless (row >= 1 and row <= 3)
     raise ColumnIndexOutOfBounds unless (column >= 1 and column <= 3)
+    @board[row-1][column-1] = piece
   end
 end
