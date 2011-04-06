@@ -29,4 +29,12 @@ describe AsciiTicTacToe do
       end
     end
   end
+
+  describe 'move' do
+    it 'should take row, col and piece parameters' do
+      lambda {
+        AsciiTicTacToe.new.move(1,1,'x')
+      }.should_not raise_exception
+    end
+  end
 end
